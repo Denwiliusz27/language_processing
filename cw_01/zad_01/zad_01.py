@@ -6,7 +6,6 @@ if __name__ == '__main__':
 
     # regex
     pattern = r'<provenance type="composed">\D*<placeName.*ref="(?P<y>.+)">(?P<x>.+)<\/placeName>'
-    # result = re.findall(regex, f.read())
 
     # kompilowanie regexu do obiektu
     regex = re.compile(pattern)
