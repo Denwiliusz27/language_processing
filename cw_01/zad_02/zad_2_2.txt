@@ -1,0 +1,17 @@
+Write regular expressions for the following languages. By “word”, we mean
+an alphabetic string separated from other words by whitespace, any relevant
+punctuation, line breaks, and so forth.
+1. the set of all strings with two consecutive repeated words (e.g., “Humbert Humbert” and “the the” but not “the bug” or “the big bug”):
+\b(\w+)\s+\1\b
+
+2. all strings that start at the beginning of the line with an integer and that
+end at the end of the line with a word:
+^[0-9]+\s+[A-Za-z]$
+
+3. all strings that have both the word 'grotto' and the word 'raven' in them
+(but not, e.g., words like grottos that merely contain the word grotto):
+\b(?=.*b\grotto\b)(?=.*\braven\b).*
+
+4. write a pattern that places the first word of an English sentence in a
+register. Deal with punctuation:
+^\s*[\p{Pd}]*\s*([A-Za-z'-]+)
