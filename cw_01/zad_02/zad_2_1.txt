@@ -1,0 +1,9 @@
+Regular expressions for:
+1. The set of all alphabetic strings:
+[A-Za-z]+
+
+2. The set of all lower case alphabetic strings ending in a 'b':
+[a-z]*b
+
+3. The set of all strings from the alphabet 'a','b' such that each 'a' is immediately preceded by and immediately followed by a 'b':
+b+((ab)*b*)*
